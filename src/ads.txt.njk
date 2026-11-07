@@ -1,0 +1,12 @@
+---
+permalink: /ads.txt
+eleventyExcludeFromCollections: true
+---
+{%- if site.adsense.publisherId -%}
+google.com, {{ site.adsense.publisherId | replace("ca-pub-", "pub-") }}, DIRECT, f08c47fec0942fa0
+{%- else -%}
+# ads.txt for {{ site.name }}
+# No advertising partners are authorised yet.
+# When your AdSense account is created, enter your publisher ID (ca-pub-XXXXXXXXXXXXXXXX)
+# in Admin > Settings > Advertising and this file will be generated automatically.
+{%- endif %}

@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "slug": "windows",
+      "name": "Windows 11 & Troubleshooting",
+      "short": "Windows",
+      "color": "#2563eb",
+      "icon": "windows",
+      "description": "Fix slow startups, update failures, corrupted system files and everyday Windows 11 problems with clear, tested-in-principle steps based on Microsoft documentation."
+    },
+    {
+      "slug": "hardware",
+      "name": "Laptop & Desktop Repair",
+      "short": "Hardware",
+      "color": "#ea580c",
+      "icon": "hardware",
+      "description": "Diagnose power, heat and storage problems on laptops and desktop PCs, and learn which upgrades and repairs are safe to do yourself."
+    },
+    {
+      "slug": "networking",
+      "name": "Wi-Fi & Network Troubleshooting",
+      "short": "Networking",
+      "color": "#0891b2",
+      "icon": "networking",
+      "description": "Solve Wi-Fi drop-outs, 'no internet' errors and slow connections, and learn the network commands IT professionals use every day."
+    },
+    {
+      "slug": "microsoft-365",
+      "name": "Microsoft 365 & Outlook",
+      "short": "Microsoft 365",
+      "color": "#7c3aed",
+      "icon": "m365",
+      "description": "Practical fixes for Outlook, OneDrive and other Microsoft 365 apps, plus productivity tips for home and small-office users."
+    },
+    {
+      "slug": "cybersecurity",
+      "name": "Cybersecurity & Online Safety",
+      "short": "Security",
+      "color": "#dc2626",
+      "icon": "security",
+      "description": "Plain-English guidance on passwords, phishing, two-factor authentication and staying safe online, aligned with national cyber security agency advice."
+    },
+    {
+      "slug": "android",
+      "name": "Android & Mobile",
+      "short": "Android",
+      "color": "#16a34a",
+      "icon": "android",
+      "description": "Troubleshoot battery drain, storage, charging and connectivity problems on Android phones and tablets."
+    },
+    {
+      "slug": "software",
+      "name": "Software Installation & Setup",
+      "short": "Software",
+      "color": "#0d9488",
+      "icon": "software",
+      "description": "Install, update and remove software safely on Windows, including command-line tools such as winget."
+    },
+    {
+      "slug": "it-tutorials",
+      "name": "IT Tutorials & Guides",
+      "short": "Tutorials",
+      "color": "#4f46e5",
+      "icon": "tutorials",
+      "description": "Foundational technology skills explained step by step: backups, installation media, IP addresses and more."
+    },
+    {
+      "slug": "ai-tools",
+      "name": "AI Tools & Productivity",
+      "short": "AI Tools",
+      "color": "#c026d3",
+      "icon": "ai",
+      "description": "Use AI assistants productively and responsibly: better prompts, safe workplace use and checking AI answers for accuracy."
+    },
+    {
+      "slug": "buying-guides",
+      "name": "Tech Comparisons & Buying Guides",
+      "short": "Buying Guides",
+      "color": "#ca8a04",
+      "icon": "buying",
+      "description": "Understand the specifications that matter before you buy storage, memory, routers and other hardware. No sponsored rankings."
+    }
+  ]
+}

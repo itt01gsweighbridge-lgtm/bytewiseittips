@@ -1,0 +1,14 @@
+# Security and caching headers – used automatically if you host on Cloudflare Pages or Netlify.
+# (GitHub Pages ignores this file; it sets its own HTTPS and caching.)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow

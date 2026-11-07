@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<div class="page-hero">
+  <div class="container narrow">
+    {% include "partials/breadcrumbs.njk" %}
+    <h1>{{ title }}</h1>
+    {%- if intro %}<p class="lede">{{ intro }}</p>{% endif %}
+    {%- if showUpdated %}<p class="page-updated">Last updated: <time datetime="{{ (lastUpdated or page.date) | ymd }}">{{ (lastUpdated or page.date) | readableDate }}</time></p>{% endif %}
+  </div>
+</div>
+<div class="container narrow">
+  <div class="prose page-prose">
+    {{ content | safe }}
+  </div>
+</div>

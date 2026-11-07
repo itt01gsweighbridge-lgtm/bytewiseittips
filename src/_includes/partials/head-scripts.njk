@@ -1,0 +1,54 @@
+{#-
+  Google tags are loaded ONLY when configured in src/_data/site.json.
+  Consent Mode v2 defaults are set before any Google tag loads.
+  consent.provider:
+    "builtin" – the site's own consent banner (shown to every visitor; everything denied until they choose).
+    "google"  – Google's certified CMP from AdSense > Privacy & messaging handles EEA/UK/Swiss visitors.
+-#}
+{%- set ga = site.analytics.ga4MeasurementId %}
+{%- set adsOn = site.adsense.enabled and site.adsense.publisherId %}
+{%- if ga or adsOn %}
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.BW_CONSENT_PROVIDER = "{{ site.consent.provider }}";
+{%- if site.consent.provider == "google" %}
+/* Strict defaults for regions that require prior consent; Google's CMP updates these. */
+gtag("consent", "default", {
+  ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied",
+  region: ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","GB","CH"],
+  wait_for_update: 500
+});
+gtag("consent", "default", { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted" });
+{%- else %}
+/* Built-in banner: everything denied until the visitor makes a choice. */
+gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied", wait_for_update: 500 });
+try {
+  var c = JSON.parse(localStorage.getItem("bw-consent") || "null");
+  if (c) {
+    gtag("consent", "update", {
+      analytics_storage: c.analytics ? "granted" : "denied",
+      ad_storage: c.ads ? "granted" : "denied",
+      ad_user_data: c.ads ? "granted" : "denied",
+      ad_personalization: c.ads ? "granted" : "denied"
+    });
+  }
+} catch (e) {}
+{%- endif %}
+gtag("set", "ads_data_redaction", true);
+</script>
+{%- endif %}
+{%- if ga %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga }}"></script>
+<script>gtag("js", new Date()); gtag("config", "{{ ga }}", { anonymize_ip: true });</script>
+{%- endif %}
+{%- if adsOn %}
+{%- if site.consent.provider != "google" %}
+<script>
+/* Request non-personalised ads unless the visitor has accepted advertising cookies. */
+(function(){var c=null;try{c=JSON.parse(localStorage.getItem("bw-consent")||"null");}catch(e){}
+(window.adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds = (c && c.ads) ? 0 : 1;})();
+</script>
+{%- endif %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense.publisherId }}" crossorigin="anonymous"></script>
+{%- endif %}

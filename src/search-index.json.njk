@@ -1,0 +1,10 @@
+---
+permalink: /search-index.json
+eleventyExcludeFromCollections: true
+---
+{%- set docs = [] %}
+{%- for p in collections.articles %}
+{%- set c = p.data.category | category(categories) %}
+{%- set docs = (docs.push({ url: p.url, title: p.data.title, description: p.data.description, category: c.name, keywords: (p.data.keywords or []) | join(" "), text: (p.content | plain | truncate(6000, true, "")) }), docs) %}
+{%- endfor %}
+{{ docs | json | safe }}

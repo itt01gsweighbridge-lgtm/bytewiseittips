@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- set pageTitle = (title + " | " + site.name) if title and page.url != "/" else (site.name + " – " + site.tagline) %}
+{%- set pageDesc = description or site.description %}
+{%- set canonical = page.url | absoluteUrl %}
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDesc }}">
+<link rel="canonical" href="{{ canonical }}">
+{%- if noindex or env == "preview" %}
+<meta name="robots" content="noindex, follow">
+{%- else %}
+<meta name="robots" content="index, follow, max-image-preview:large">
+{%- endif %}
+<meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="light dark">
+{%- if site.searchConsole.verificationCode %}
+<meta name="google-site-verification" content="{{ site.searchConsole.verificationCode }}">
+{%- endif %}
+{%- if site.adsense.publisherId and site.adsense.enabled %}
+<meta name="google-adsense-account" content="{{ site.adsense.publisherId }}">
+{%- endif %}
+{%- set ogImage = image if (image and not image.endsWith(".svg")) else (("/assets/img/og/" + category + ".jpg") if category else "/assets/img/og/default.jpg") %}
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:type" content="{{ 'article' if isArticle else 'website' }}">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ pageDesc }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ ogImage | absoluteUrl }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title or site.name }}">
+<meta name="twitter:description" content="{{ pageDesc }}">
+<meta name="twitter:image" content="{{ ogImage | absoluteUrl }}">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/main.css?v={{ buildTime | ymd }}">
+<script>
+/* Apply saved or system colour theme before first paint (prevents flash). */
+(function(){try{var t=localStorage.getItem("bw-theme");if(t==="dark"||t==="light"){document.documentElement.dataset.theme=t;}}catch(e){}})();
+</script>
+{% include "partials/head-scripts.njk" %}
+{% include "partials/schema.njk" %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": site.name,
+  "url": site.url + "/",
+  "description": site.description,
+  "inLanguage": site.language,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": { "@type": "EntryPoint", "urlTemplate": site.url + "/search/?q={search_term_string}" },
+    "query-input": "required name=search_term_string"
+  }
+} | json | safe }}</script>
+</head>
+<body class="{{ bodyClass or '' }}">
+<a class="skip-link" href="#main">Skip to main content</a>
+{% include "partials/header.njk" %}
+{% if env == "preview" %}
+<div class="preview-banner" role="note">Preview build – this copy is not indexed by search engines. Owner settings marked “Setup required” must be completed before publishing.</div>
+{% endif %}
+<main id="main" tabindex="-1">
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+{% include "partials/consent.njk" %}
+<script src="/assets/js/main.js?v={{ buildTime | ymd }}" defer></script>
+{%- if pageScript %}<script src="/assets/js/{{ pageScript }}?v={{ buildTime | ymd }}" defer></script>{% endif %}
+</body>
+</html>

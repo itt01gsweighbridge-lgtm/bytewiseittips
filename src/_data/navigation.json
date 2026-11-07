@@ -1,0 +1,26 @@
+{
+  "main": [
+    { "label": "Home", "url": "/" },
+    { "label": "Windows", "url": "/category/windows/" },
+    { "label": "Networking", "url": "/category/networking/" },
+    { "label": "Security", "url": "/category/cybersecurity/" },
+    { "label": "Microsoft 365", "url": "/category/microsoft-365/" },
+    { "label": "All Articles", "url": "/articles/" },
+    { "label": "Categories", "url": "/categories/" }
+  ],
+  "footerAbout": [
+    { "label": "About Us", "url": "/about/" },
+    { "label": "Author Profile", "url": "/author/" },
+    { "label": "Editorial Policy", "url": "/editorial-policy/" },
+    { "label": "Corrections Policy", "url": "/corrections-policy/" },
+    { "label": "Contact Us", "url": "/contact/" }
+  ],
+  "footerLegal": [
+    { "label": "Privacy Policy", "url": "/privacy-policy/" },
+    { "label": "Cookie Policy", "url": "/cookie-policy/" },
+    { "label": "Terms and Conditions", "url": "/terms/" },
+    { "label": "Disclaimer", "url": "/disclaimer/" },
+    { "label": "Accessibility", "url": "/accessibility/" },
+    { "label": "Sitemap", "url": "/sitemap/" }
+  ]
+}

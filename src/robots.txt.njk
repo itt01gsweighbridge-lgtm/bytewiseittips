@@ -1,0 +1,15 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{%- if env == "preview" -%}
+User-agent: *
+Disallow: /
+{%- else -%}
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /search/
+
+Sitemap: {{ "/sitemap.xml" | absoluteUrl }}
+{%- endif %}

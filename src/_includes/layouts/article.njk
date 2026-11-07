@@ -1,0 +1,96 @@
+---
+layout: layouts/base.njk
+---
+{%- set cat = category | category(categories) %}
+{%- set toc = content | toc %}
+{%- set mins = content | readingTime %}
+<article class="article" data-pagefind-body>
+  <header class="article-hero" style="--cat: {{ cat.color }}">
+    <div class="container narrow">
+      {% include "partials/breadcrumbs.njk" %}
+      <a class="cat-pill" href="/category/{{ cat.slug }}/">{{ cat.name }}</a>
+      <h1>{{ title }}</h1>
+      <p class="lede">{{ description }}</p>
+      <div class="meta">
+        <span>By <a href="/author/">{{ author.name }}</a></span>
+        <span aria-hidden="true">·</span>
+        <span>Published <time datetime="{{ page.date | ymd }}">{{ page.date | readableDate }}</time></span>
+        {%- if (updated | ymd) != (page.date | ymd) %}
+        <span aria-hidden="true">·</span>
+        <span>Updated <time datetime="{{ updated | ymd }}">{{ updated | readableDate }}</time></span>
+        {%- endif %}
+        <span aria-hidden="true">·</span>
+        <span>{{ mins }} min read</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container article-layout">
+    <div class="article-main">
+      <figure class="article-figure">
+        <img src="{{ image or ('/assets/img/categories/' + cat.slug + '.svg') }}" alt="{{ imageAlt or ('Illustration for ' + cat.name) }}" width="1200" height="520" fetchpriority="high">
+      </figure>
+
+      {%- if toc.length > 2 %}
+      <details class="toc-mobile">
+        <summary>On this page</summary>
+        <ol>{% for h in toc %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol>
+      </details>
+      {%- endif %}
+
+      {% set slotName = "inArticleTop" %}{% include "partials/ad-slot.njk" %}
+
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+
+      {%- if faq and faq.length %}
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Frequently asked questions</h2>
+        {%- for item in faq %}
+        <details{% if loop.first %} open{% endif %}>
+          <summary>{{ item.q }}</summary>
+          <div class="faq-a">{{ item.a | safe }}</div>
+        </details>
+        {%- endfor %}
+      </section>
+      <script type="application/ld+json">{%- set qa = [] %}{% for item in faq %}{% set qa = (qa.push({ "@type": "Question", "name": item.q, "acceptedAnswer": { "@type": "Answer", "text": item.a | plain } }), qa) %}{% endfor %}{{ { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": qa } | json | safe }}</script>
+      {%- endif %}
+
+      {%- if references and references.length %}
+      <section class="references" aria-labelledby="ref-h">
+        <h2 id="ref-h">Sources and further reading</h2>
+        <ul>
+          {%- for r in references %}
+          <li><a href="{{ r.url }}" rel="noopener noreferrer" target="_blank">{{ r.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </section>
+      {%- endif %}
+
+      {% set slotName = "inArticleBottom" %}{% include "partials/ad-slot.njk" %}
+
+      <aside class="article-note" aria-label="About this article">
+        <p><strong>How we write our guides:</strong> this article was prepared by the {{ site.name }} editorial team and checked against the official documentation listed above. Menu names can differ slightly between software versions and device manufacturers. Spotted an error? Please tell us via our <a href="/contact/">contact page</a> – see our <a href="/corrections-policy/">corrections policy</a>.</p>
+      </aside>
+
+      {%- set rel = collections.articles | related(page.url, category, keywords, relatedSlugs) %}
+      {%- if not rel.length %}{% set rel = collections.articles | exclude(page.url) | limit(3) %}{% endif %}
+      <section class="related" aria-labelledby="rel-h">
+        <h2 id="rel-h">Related guides</h2>
+        <div class="card-grid three">
+          {%- for post in rel %}{% include "partials/card.njk" %}{% endfor %}
+        </div>
+      </section>
+    </div>
+
+    {%- if toc.length > 2 %}
+    <aside class="article-aside" aria-label="Table of contents">
+      <nav class="toc">
+        <p class="toc-title">On this page</p>
+        <ol>{% for h in toc %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol>
+      </nav>
+    </aside>
+    {%- endif %}
+  </div>
+</article>

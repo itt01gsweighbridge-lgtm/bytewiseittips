@@ -1,0 +1,26 @@
+{#- Built-in, non-intrusive consent banner. Rendered only when analytics or ads are configured
+     and the Google CMP is not selected. Never blocks content; equal-weight Accept/Reject buttons. -#}
+{%- set needsConsent = (site.analytics.ga4MeasurementId or (site.adsense.enabled and site.adsense.publisherId)) and site.consent.provider != "google" %}
+{%- if needsConsent %}
+<div class="consent" id="consent" role="region" aria-label="Cookie consent" hidden>
+  <div class="consent-inner">
+    <p><strong>Your privacy choices.</strong> We use essential storage to run this site. With your permission we also use cookies for
+      {% if site.analytics.ga4MeasurementId %}anonymous usage statistics (Google Analytics){% endif %}{% if site.analytics.ga4MeasurementId and site.adsense.enabled %} and {% endif %}{% if site.adsense.enabled %}advertising (Google AdSense){% endif %}.
+      See our <a href="/cookie-policy/">Cookie Policy</a>.</p>
+    <div class="consent-options" hidden>
+      {%- if site.analytics.ga4MeasurementId %}
+      <label><input type="checkbox" name="analytics"> Analytics cookies</label>
+      {%- endif %}
+      {%- if site.adsense.enabled %}
+      <label><input type="checkbox" name="ads"> Personalised advertising cookies</label>
+      {%- endif %}
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-secondary" data-consent="reject">Reject all</button>
+      <button type="button" class="btn btn-secondary" data-consent="customise">Customise</button>
+      <button type="button" class="btn btn-secondary consent-save" data-consent="save" hidden>Save choices</button>
+      <button type="button" class="btn btn-primary" data-consent="accept">Accept all</button>
+    </div>
+  </div>
+</div>
+{%- endif %}

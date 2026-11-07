@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: Search Results
+description: Search all ByteWise IT Tips troubleshooting guides and tutorials.
+permalink: /search/
+noindex: true
+pageScript: search.js
+breadcrumbs:
+  - { label: "Home", url: "/" }
+  - { label: "Search", url: "/search/" }
+---
+<div class="page-hero">
+  <div class="container narrow">
+    {% include "partials/breadcrumbs.njk" %}
+    <h1>Search guides</h1>
+  </div>
+</div>
+<section class="section search-page">
+  <div class="container narrow">
+    <form id="search-form" action="/search/" method="get" role="search">
+      <label for="search-q" class="visually-hidden">Search term</label>
+      <input id="search-q" type="search" name="q" placeholder="Search for a problem, app or error…" maxlength="100" autofocus>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+    <p id="search-status" role="status" aria-live="polite"></p>
+    <ol id="search-results" class="search-results"></ol>
+    <noscript><p>Search needs JavaScript. You can browse <a href="/articles/">all articles</a> or the <a href="/sitemap/">sitemap</a> instead.</p></noscript>
+    <h2 style="margin-top:40px;font-size:1.2rem">Browse by category</h2>
+    <nav class="chip-row" aria-label="Categories">{% for c in categories %}<a href="/category/{{ c.slug }}/">{{ c.name }}</a>{% endfor %}</nav>
+  </div>
+</section>

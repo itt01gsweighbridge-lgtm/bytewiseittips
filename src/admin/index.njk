@@ -1,0 +1,25 @@
+---
+permalink: /admin/index.html
+eleventyExcludeFromCollections: true
+noindex: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · {{ site.name }}</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <!--
+    ByteWise IT Tips administration panel.
+    Powered by Sveltia CMS (open source, MIT licence) – a Git-based CMS that edits the Markdown/JSON
+    files in your GitHub repository. Every save is a Git commit; GitHub Actions then rebuilds the site.
+    Authentication: you must sign in with a GitHub account that has write access to the repository.
+    Configuration: /admin/config.yml
+  -->
+  <script src="https://unpkg.com/@sveltia/cms@0.261.0/dist/sveltia-cms.js" type="module"></script>
+</body>
+</html>

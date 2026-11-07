@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: Article Categories
+description: Explore ByteWise IT Tips guides by topic – Windows 11, hardware repair, Wi-Fi and networking, Microsoft 365, cybersecurity, Android, software, IT tutorials, AI tools and buying guides.
+permalink: /categories/
+breadcrumbs:
+  - { label: "Home", url: "/" }
+  - { label: "Categories", url: "/categories/" }
+---
+<div class="page-hero">
+  <div class="container">
+    {% include "partials/breadcrumbs.njk" %}
+    <h1>Article categories</h1>
+    <p class="lede">Pick a topic to see every guide we have published in it.</p>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    {%- for c in categories %}
+    {%- set list = collections.articles | byCategory(c.slug) %}
+    <div class="section-head" style="margin-top:{{ '0' if loop.first else '48px' }}">
+      <div>
+        <h2><a href="/category/{{ c.slug }}/" style="color:inherit;text-decoration:none">{{ c.name }}</a></h2>
+        <p>{{ c.description }}</p>
+      </div>
+      <a href="/category/{{ c.slug }}/">{{ list.length }} guide{% if list.length != 1 %}s{% endif %} →</a>
+    </div>
+    <div class="card-grid">{% for post in list | limit(3) %}{% include "partials/card.njk" %}{% endfor %}</div>
+    {%- endfor %}
+  </div>
+</section>

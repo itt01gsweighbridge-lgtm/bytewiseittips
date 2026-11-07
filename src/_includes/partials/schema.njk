@@ -1,0 +1,25 @@
+{%- if breadcrumbs %}
+{%- set crumbItems = [] %}
+{%- for b in breadcrumbs %}
+{%- set crumbItems = (crumbItems.push({ "@type": "ListItem", "position": loop.index, "name": b.label, "item": (b.url | absoluteUrl) }), crumbItems) %}
+{%- endfor %}
+<script type="application/ld+json">{{ { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbItems } | json | safe }}</script>
+{%- endif %}
+{%- if isArticle %}
+{%- set cat = category | category(categories) %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": title,
+  "description": description,
+  "image": [("/assets/img/og/" + category + ".jpg") | absoluteUrl],
+  "datePublished": page.date | isoDate,
+  "dateModified": updated | isoDate,
+  "inLanguage": site.language,
+  "articleSection": cat.name,
+  "keywords": (keywords or []) | join(", "),
+  "mainEntityOfPage": { "@type": "WebPage", "@id": page.url | absoluteUrl },
+  "author": { "@type": "Organization", "name": author.name, "url": "/author/" | absoluteUrl },
+  "publisher": { "@type": "Organization", "name": site.name, "url": site.url + "/", "logo": { "@type": "ImageObject", "url": "/assets/img/logo-512.png" | absoluteUrl } }
+} | json | safe }}</script>
+{%- endif %}

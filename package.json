@@ -1,0 +1,20 @@
+{
+  "name": "bytewise-it-tips",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ByteWise IT Tips - technology education and troubleshooting website (Eleventy static site + Sveltia CMS)",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --port=8080",
+    "build": "ELEVENTY_ENV=production eleventy",
+    "build:preview": "ELEVENTY_ENV=preview eleventy",
+    "check": "node scripts/publish-check.mjs",
+    "test": "node scripts/test-site.mjs",
+    "images": "python3 scripts/make_images.py"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8",
+    "html-minifier-terser": "^7.2.0"
+  }
+}

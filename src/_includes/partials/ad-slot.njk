@@ -1,0 +1,10 @@
+{#- Manual ad unit. Renders nothing unless AdSense is enabled AND a slot ID is configured.
+     Labelled "Advertisement" (permitted label) and kept visually separate from content and navigation. -#}
+{%- set slotId = site.adsense.slots[slotName] %}
+{%- if site.adsense.enabled and site.adsense.publisherId and slotId %}
+<div class="ad-slot" aria-label="Advertisement">
+  <span class="ad-label">Advertisement</span>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="{{ site.adsense.publisherId }}" data-ad-slot="{{ slotId }}" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+{%- endif %}

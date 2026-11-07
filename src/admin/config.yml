@@ -1,0 +1,237 @@
+# ByteWise IT Tips – admin panel configuration (Sveltia CMS, Decap-compatible).
+# BEFORE FIRST USE: replace YOUR-GITHUB-USERNAME/YOUR-REPOSITORY below with your repository,
+# e.g. jane/jane.github.io  (see docs/DEPLOYMENT.md).
+
+backend:
+  name: github
+  repo: itt01gsweighbridge-lgtm/bytewiseittips
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+
+site_url: https://bytewiseittips.com
+display_url: https://bytewiseittips.com
+logo_url: /assets/img/logo.svg
+
+media_folder: src/assets/img/uploads
+public_folder: /assets/img/uploads
+
+# Uploaded images are converted to WebP and resized for fast loading (Sveltia CMS feature).
+media_libraries:
+  default:
+    config:
+      max_file_size: 4000000
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1600
+          height: 1600
+
+collections:
+  # ------------------------------------------------------------------ ARTICLES
+  - name: articles
+    label: Articles
+    label_singular: Article
+    description: >-
+      Troubleshooting guides and tutorials. Tick “Draft” to keep an article unpublished.
+      Set a future publication date to schedule it – the site rebuilds daily and publishes it automatically.
+    folder: src/articles
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title, category]
+    view_filters:
+      - { label: Drafts, field: draft, pattern: true }
+    view_groups:
+      - { label: Category, field: category }
+    fields:
+      - { label: Title, name: title, widget: string, hint: "50–65 characters is ideal for search results." }
+      - label: Meta description
+        name: description
+        widget: text
+        hint: "Shown in search results and social shares. Aim for 120–160 characters."
+      - { label: Publication date, name: date, widget: datetime, hint: "A future date schedules the article." }
+      - { label: Last meaningful update, name: updated, widget: datetime, required: false }
+      - label: Category
+        name: category
+        widget: relation
+        collection: settings
+        file: categories
+        search_fields: ["items.*.name"]
+        value_field: "items.*.slug"
+        display_fields: ["items.*.name"]
+      - { label: Draft (not published), name: draft, widget: boolean, default: true, required: false }
+      - { label: Keywords, name: keywords, widget: list, required: false, hint: "Used for search and related articles." }
+      - { label: Featured image (optional), name: image, widget: image, required: false, hint: "Leave empty to use the category illustration. Only upload images you own or are licensed to use." }
+      - { label: Image alt text, name: imageAlt, widget: string, required: false }
+      - label: Related article slugs
+        name: relatedSlugs
+        widget: relation
+        collection: articles
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        multiple: true
+        required: false
+      - label: Frequently asked questions
+        name: faq
+        widget: list
+        required: false
+        fields:
+          - { label: Question, name: q, widget: string }
+          - { label: Answer, name: a, widget: text }
+      - label: Sources and further reading
+        name: references
+        widget: list
+        required: false
+        hint: "Only list sources you have actually checked."
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: URL, name: url, widget: string, pattern: ['^https://', 'Must start with https://'] }
+      - { label: Body, name: body, widget: markdown }
+
+  # ------------------------------------------------------------------ PAGES
+  - name: pages
+    label: Pages
+    label_singular: Page
+    description: >-
+      About, legal and policy pages. These pages contain small template tags such as
+      {% if site.owner.name %} – edit the text around them, but leave the tags intact.
+    folder: src/pages
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Meta description, name: description, widget: text }
+      - { label: Introduction, name: intro, widget: text, required: false }
+      - { label: Show "last updated" date, name: showUpdated, widget: boolean, required: false }
+      - { label: Last updated, name: lastUpdated, widget: datetime, required: false, format: "YYYY-MM-DD" }
+      - { label: Body, name: body, widget: markdown, modes: [raw, rich_text] }
+
+  # ------------------------------------------------------------------ SETTINGS
+  - name: settings
+    label: Settings
+    editor: { preview: false }
+    files:
+      - name: site
+        label: Website settings (owner, contact, analytics, advertising)
+        file: src/_data/site.json
+        format: json
+        fields:
+          - { label: Site name, name: name, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Site description, name: description, widget: text }
+          - { label: Website address (no trailing slash), name: url, widget: string, hint: "e.g. https://www.yourdomain.com" }
+          - { label: Language, name: language, widget: hidden }
+          - { label: Locale, name: locale, widget: hidden }
+          - { label: Launch year, name: launchYear, widget: number }
+          - { label: Articles per page, name: postsPerPage, widget: number }
+          - label: Owner (shown on About, Privacy and Terms pages)
+            name: owner
+            widget: object
+            fields:
+              - { label: Owner / operator name, name: name, widget: string, required: false }
+              - { label: Country, name: country, widget: string, required: false }
+              - { label: Public contact email (optional), name: contactEmail, widget: string, required: false }
+          - label: Contact form
+            name: contact
+            widget: object
+            fields:
+              - { label: Web3Forms access key, name: web3formsAccessKey, widget: string, required: false, hint: "Free key from web3forms.com – messages are emailed to you." }
+          - label: Social profiles
+            name: social
+            widget: object
+            fields:
+              - { label: YouTube URL, name: youtube, widget: string, required: false }
+              - { label: X (Twitter) URL, name: x, widget: string, required: false }
+              - { label: Facebook URL, name: facebook, widget: string, required: false }
+              - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
+          - label: Google Search Console
+            name: searchConsole
+            widget: object
+            fields:
+              - { label: HTML tag verification code, name: verificationCode, widget: string, required: false, hint: "Only the content=\"...\" value." }
+          - label: Google Analytics 4
+            name: analytics
+            widget: object
+            fields:
+              - { label: Measurement ID (G-XXXXXXX), name: ga4MeasurementId, widget: string, required: false }
+          - label: Cookie consent
+            name: consent
+            widget: object
+            fields:
+              - label: Consent provider
+                name: provider
+                widget: select
+                options:
+                  - { label: "Built-in banner (default)", value: builtin }
+                  - { label: "Google certified CMP (AdSense › Privacy & messaging)", value: google }
+                hint: "Switch to Google CMP once your AdSense European regulations message is published."
+          - label: Google AdSense
+            name: adsense
+            widget: object
+            fields:
+              - { label: Enable AdSense, name: enabled, widget: boolean, hint: "Only enable after you have a real publisher ID." }
+              - { label: Publisher ID (ca-pub-XXXXXXXXXXXXXXXX), name: publisherId, widget: string, required: false, pattern: ['^$|^ca-pub-[0-9]{16}$', 'Format: ca-pub- followed by 16 digits'] }
+              - { label: Auto ads, name: autoAds, widget: boolean, hint: "Turn Auto ads on/off in your AdSense account; this switch is for your records." }
+              - label: Manual ad units (optional)
+                name: slots
+                widget: object
+                fields:
+                  - { label: In-article (after intro) slot ID, name: inArticleTop, widget: string, required: false }
+                  - { label: In-article (end) slot ID, name: inArticleBottom, widget: string, required: false }
+      - name: author
+        label: Author profile
+        file: src/_data/author.json
+        format: json
+        fields:
+          - { label: Author / team name, name: name, widget: string }
+          - { label: Role, name: role, widget: string }
+          - { label: Team biography, name: bio, widget: text }
+          - { label: Areas of focus, name: expertise, widget: list }
+          - { label: Editor's real name, name: personName, widget: string, required: false }
+          - { label: Editor's biography (truthful), name: personBio, widget: text, required: false }
+      - name: categories
+        label: Categories
+        file: src/_settings/categories.json
+        format: json
+        fields:
+          - label: Categories
+            name: items
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Slug (URL – don't change after publishing), name: slug, widget: string, pattern: ['^[a-z0-9-]+$', 'Lowercase letters, numbers and hyphens only'] }
+              - { label: Name, name: name, widget: string }
+              - { label: Short name (menus), name: short, widget: string }
+              - { label: Colour, name: color, widget: color }
+              - label: Icon
+                name: icon
+                widget: select
+                options: [windows, hardware, networking, m365, security, android, software, tutorials, ai, buying]
+              - { label: Description, name: description, widget: text }
+      - name: navigation
+        label: Menus
+        file: src/_data/navigation.json
+        format: json
+        fields:
+          - label: Main menu
+            name: main
+            widget: list
+            fields: [{ label: Label, name: label, widget: string }, { label: URL, name: url, widget: string }]
+          - label: Footer – About links
+            name: footerAbout
+            widget: list
+            fields: [{ label: Label, name: label, widget: string }, { label: URL, name: url, widget: string }]
+          - label: Footer – Policy links
+            name: footerLegal
+            widget: list
+            fields: [{ label: Label, name: label, widget: string }, { label: URL, name: url, widget: string }]

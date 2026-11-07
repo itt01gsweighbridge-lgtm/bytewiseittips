@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+description: ByteWise IT Tips publishes original, step-by-step guides on Windows troubleshooting, Wi-Fi and networking, Microsoft 365, cybersecurity, Android and choosing the right tech.
+permalink: /
+---
+<section class="home-hero">
+  <div class="container">
+    <span class="eyebrow">Practical IT help · No jargon</span>
+    <h1>Fix your tech problems <span>with confidence</span></h1>
+    <p class="lede">Clear, step-by-step guides for Windows, Wi-Fi, Microsoft 365, Android and online safety – checked against official documentation and written for real people.</p>
+    <form class="hero-search" action="/search/" method="get" role="search">
+      <label for="hero-q" class="visually-hidden">Search all guides</label>
+      <input id="hero-q" type="search" name="q" placeholder="e.g. Wi-Fi connected but no internet" maxlength="100">
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+    <div class="popular">
+      <span>Popular:</span>
+      <a href="/articles/wifi-connected-no-internet/">No internet</a>
+      <a href="/articles/windows-update-stuck-fix/">Windows Update stuck</a>
+      <a href="/articles/outlook-not-receiving-emails/">Outlook not syncing</a>
+      <a href="/articles/recognise-phishing-emails/">Spot phishing</a>
+    </div>
+  </div>
+</section>
+
+{%- set posts = collections.articles %}
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><h2>Latest guides</h2><p>Freshly published and recently updated troubleshooting guides.</p></div>
+      <a href="/articles/">View all {{ posts.length }} articles →</a>
+    </div>
+    <div class="featured-grid">
+      {%- set post = posts[0] %}{% include "partials/card.njk" %}
+      <div class="featured-side">
+        {%- for post in posts.slice(1, 3) %}{% include "partials/card.njk" %}{% endfor %}
+      </div>
+    </div>
+    <div class="card-grid" style="margin-top:22px">
+      {%- for post in posts.slice(3, 9) %}{% include "partials/card.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><div><h2>Browse by topic</h2><p>Ten focused categories covering the problems people actually search for.</p></div><a href="/categories/">All categories →</a></div>
+    <div class="cat-grid">
+      {%- for c in categories %}
+      {%- set n = (posts | byCategory(c.slug)).length %}
+      <a class="cat-tile" href="/category/{{ c.slug }}/" style="--cat: {{ c.color }}">
+        <span class="cat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ icons[c.icon] | safe }}</svg></span>
+        <span><strong>{{ c.name }}</strong><span>{{ n }} guide{% if n != 1 %}s{% endif %}</span></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{%- for slug in ["windows", "networking", "cybersecurity"] %}
+{%- set c = slug | category(categories) %}
+{%- set list = posts | byCategory(slug) | limit(3) %}
+{%- if list.length %}
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><h2>{{ c.name }}</h2><p>{{ c.description }}</p></div><a href="/category/{{ c.slug }}/">More {{ c.short }} guides →</a></div>
+    <div class="card-grid">{% for post in list %}{% include "partials/card.njk" %}{% endfor %}</div>
+  </div>
+</section>
+{%- endif %}
+{%- endfor %}
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><div><h2>Why readers trust ByteWise</h2><p>Our standards are published so you can hold us to them.</p></div><a href="/editorial-policy/">Editorial policy →</a></div>
+    <div class="trust">
+      <div><h3>Checked against official sources</h3><p>Steps are verified against Microsoft, Google and national cyber security agency documentation, and sources are listed on every guide.</p></div>
+      <div><h3>Safe steps first</h3><p>We start with the least risky fixes, warn before anything that can cause data loss, and tell you when to call a professional.</p></div>
+      <div><h3>Kept up to date</h3><p>Guides show their publication and update dates, and errors are corrected openly under our corrections policy.</p></div>
+      <div><h3>Independent</h3><p>No paid placements or sponsored rankings. Any advertising is clearly labelled and kept separate from our guides.</p></div>
+    </div>
+  </div>
+</section>

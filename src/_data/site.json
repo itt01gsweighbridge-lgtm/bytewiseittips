@@ -1,0 +1,42 @@
+{
+  "name": "ByteWise IT Tips",
+  "tagline": "Clear, practical fixes for everyday technology problems",
+  "description": "ByteWise IT Tips publishes original, step-by-step guides on Windows troubleshooting, networking, Microsoft 365, cybersecurity, Android, software and practical technology buying advice.",
+  "url": "https://bytewiseittips.com",
+  "language": "en",
+  "locale": "en_GB",
+  "launchYear": 2026,
+  "owner": {
+    "name": "Sador",
+    "country": "United Kingdom",
+    "contactEmail": "itt01.gsweighbridge@gmail.com"
+  },
+  "contact": {
+    "web3formsAccessKey": ""
+  },
+  "social": {
+    "youtube": "",
+    "x": "",
+    "facebook": "",
+    "linkedin": ""
+  },
+  "searchConsole": {
+    "verificationCode": ""
+  },
+  "analytics": {
+    "ga4MeasurementId": ""
+  },
+  "consent": {
+    "provider": "builtin"
+  },
+  "adsense": {
+    "enabled": false,
+    "publisherId": "",
+    "autoAds": true,
+    "slots": {
+      "inArticleTop": "",
+      "inArticleBottom": ""
+    }
+  },
+  "postsPerPage": 12
+}

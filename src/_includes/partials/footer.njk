@@ -1,0 +1,38 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/">{% include "partials/logo.njk" %}<span class="brand-text"><span class="brand-name">ByteWise</span><span class="brand-sub">IT Tips</span></span></a>
+      <p>{{ site.description }}</p>
+      {%- set hasSocial = site.social.youtube or site.social.x or site.social.facebook or site.social.linkedin %}
+      {%- if hasSocial %}
+      <ul class="social">
+        {%- if site.social.youtube %}<li><a href="{{ site.social.youtube }}" rel="me noopener" target="_blank">YouTube</a></li>{% endif %}
+        {%- if site.social.x %}<li><a href="{{ site.social.x }}" rel="me noopener" target="_blank">X</a></li>{% endif %}
+        {%- if site.social.facebook %}<li><a href="{{ site.social.facebook }}" rel="me noopener" target="_blank">Facebook</a></li>{% endif %}
+        {%- if site.social.linkedin %}<li><a href="{{ site.social.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></li>{% endif %}
+      </ul>
+      {%- endif %}
+    </div>
+    <nav aria-label="Categories">
+      <h2 class="footer-h">Categories</h2>
+      <ul>
+        {%- for c in categories %}<li><a href="/category/{{ c.slug }}/">{{ c.short }}</a></li>{% endfor %}
+      </ul>
+    </nav>
+    <nav aria-label="About">
+      <h2 class="footer-h">About</h2>
+      <ul>{%- for l in navigation.footerAbout %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}</ul>
+    </nav>
+    <nav aria-label="Legal">
+      <h2 class="footer-h">Policies</h2>
+      <ul>
+        {%- for l in navigation.footerLegal %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+        <li><button type="button" class="linklike" data-open-consent>Cookie settings</button></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    {%- set cy = "" | year %}<p>© {{ site.launchYear }}{% if cy != site.launchYear %}–{{ cy }}{% endif %} {{ site.name }}{% if site.owner.name %}, operated by {{ site.owner.name }}{% endif %}. Original content; please do not republish without permission.</p>
+    <p>Independent website. Not affiliated with Microsoft, Google, Apple or any other company mentioned. Product names are trademarks of their owners.</p>
+  </div>
+</footer>
