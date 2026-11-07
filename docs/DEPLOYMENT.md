@@ -80,7 +80,7 @@ Commit. Open the **Actions** tab – the “Build and deploy” workflow runs (2
 ## Step 5 – Sign in to the admin panel
 
 1. Go to `https://YOUR-USERNAME.github.io/admin/`.
-2. Click **Sign In with Token** (the dialog links to GitHub with the right permissions pre-selected).
+2. Click **Sign In Using Access Token** (not "Sign In with GitHub", which needs an extra login server). The dialog links to GitHub with the right permissions pre-selected.
 3. Create a token at GitHub › **Settings › Developer settings › Personal access tokens › Fine-grained tokens › Generate new token**:
    - *Repository access:* Only select repositories › your site repository.
    - *Permissions › Repository permissions:* **Contents: Read and write** (Metadata read-only is added automatically).
