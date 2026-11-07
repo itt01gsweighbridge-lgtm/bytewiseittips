@@ -1,0 +1,10 @@
+{%- if youtube.channelUrl %}
+<aside class="channel-cta" aria-label="ByteWise IT on YouTube">
+  <svg aria-hidden="true" viewBox="0 0 68 48" width="44" height="31"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.3.3 34 .3 34 .3s-21.3 0-26.5 1.4a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.7 47.7 34 47.7 34 47.7s21.3 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="#f00"/><path d="M27 34V14l18 10z" fill="#fff"/></svg>
+  <div>
+    <p class="channel-cta-title">Prefer to watch? Find step-by-step video tutorials on our YouTube channel.</p>
+    <p>{{ youtube.channelName }} publishes short, practical walkthroughs on Windows, networking, PowerShell, Python automation, Microsoft 365 and security.</p>
+  </div>
+  <a class="btn btn-primary" href="{{ youtube.channelUrl }}?sub_confirmation=1" rel="noopener" target="_blank">Subscribe on YouTube</a>
+</aside>
+{%- endif %}

@@ -3,6 +3,7 @@ title: "Outlook Not Receiving or Syncing Email? Fixes for Windows"
 description: "Troubleshoot Outlook when new emails stop arriving or folders won't sync: check connection status, offline mode, mailbox storage, rules, junk filters and cached mode in classic and new Outlook."
 date: 2026-10-24
 category: microsoft-365
+videos: ["2v4z4Ia-QZs"]
 keywords: [outlook, not receiving email, sync, microsoft 365, offline, mailbox full, new outlook]
 relatedSlugs: [outlook-safe-mode-new-profile, onedrive-not-syncing, recognise-phishing-emails]
 faq:

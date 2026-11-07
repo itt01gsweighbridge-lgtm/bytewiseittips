@@ -38,6 +38,14 @@ layout: layouts/base.njk
       </details>
       {%- endif %}
 
+      {%- if videos and videos.length %}
+      <section class="article-videos" aria-labelledby="vid-h">
+        <h2 id="vid-h" class="article-videos-h">{{ "Watch the video tutorial" if videos.length == 1 else "Watch the video tutorials" }}</h2>
+        <p class="article-videos-sub">Related walkthrough{% if videos.length > 1 %}s{% endif %} from the ByteWise IT YouTube channel.</p>
+        <div class="yt-list">{%- for vid in videos %}{% set v = vid | videoById(youtube.items) %}{% if v %}{% include "partials/video.njk" %}{% endif %}{% endfor %}</div>
+      </section>
+      {%- endif %}
+
       {% set slotName = "inArticleTop" %}{% include "partials/ad-slot.njk" %}
 
       <div class="prose">
@@ -69,6 +77,8 @@ layout: layouts/base.njk
       {%- endif %}
 
       {% set slotName = "inArticleBottom" %}{% include "partials/ad-slot.njk" %}
+
+      {% include "partials/channel-cta.njk" %}
 
       <aside class="article-note" aria-label="About this article">
         <p><strong>How we write our guides:</strong> this article was prepared by the {{ site.name }} editorial team and checked against the official documentation listed above. Menu names can differ slightly between software versions and device manufacturers. Spotted an error? Please tell us via our <a href="/contact/">contact page</a> – see our <a href="/corrections-policy/">corrections policy</a>.</p>

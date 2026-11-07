@@ -47,6 +47,10 @@ ByteWise IT Tips is an independent website. More about the people behind it is o
 
 ByteWise IT Tips is **not affiliated with** Microsoft, Google, Apple, Samsung or any other company whose products we write about. Product names and trademarks belong to their respective owners.
 
+## Video tutorials on YouTube
+
+Many of our guides are paired with short video walkthroughs on our YouTube channel, [ByteWise IT]({{ site.social.youtube }}). Where a video covers the same task, you’ll find it embedded at the top of the guide – read the steps, watch the demonstration, or both.
+
 ## How the site is funded
 
 The site may display advertising from Google AdSense. Advertising is always labelled, is kept visually separate from our guides, and never influences what we write or recommend. We do not accept payment for coverage. Read more in our [privacy policy](/privacy-policy/) and [disclaimer](/disclaimer/).

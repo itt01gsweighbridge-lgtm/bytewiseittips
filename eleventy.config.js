@@ -137,6 +137,7 @@ export default function (eleventyConfig) {
     while ((m = re.exec(html))) out.push({ id: m[1], text: m[2].replace(/<[^>]+>/g, "") });
     return out;
   });
+  eleventyConfig.addFilter("videoById", (id, items) => (items || []).find((v) => v.id === id));
   eleventyConfig.addFilter("plain", (s) => String(s || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 

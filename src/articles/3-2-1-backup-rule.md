@@ -3,6 +3,7 @@ title: "The 3-2-1 Backup Rule: A Simple Backup Plan for Home and Small Office"
 description: "Protect your files from hardware failure, theft and ransomware with the 3-2-1 backup rule. Learn what to back up, how to use Windows tools, cloud storage and external drives, and how to test restores."
 date: 2026-11-01
 category: it-tutorials
+videos: ["WwyhijjLvbs", "EfPcYDHEy1Y"]
 keywords: [backup, 3-2-1 rule, ransomware, external drive, cloud backup, file history, onedrive]
 relatedSlugs: [onedrive-not-syncing, upgrade-laptop-to-ssd, recognise-phishing-emails]
 faq:

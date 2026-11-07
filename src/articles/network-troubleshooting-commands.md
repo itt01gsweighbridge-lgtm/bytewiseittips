@@ -3,6 +3,7 @@ title: "8 Network Troubleshooting Commands Every Windows User Should Know"
 description: "Learn how to use ipconfig, ping, tracert, nslookup, pathping, netstat, getmac and netsh to diagnose Wi-Fi and internet problems in Windows, with examples of what the results mean."
 date: 2026-10-22
 category: networking
+videos: ["n8vj8AdTlJs"]
 keywords: [ipconfig, ping, tracert, nslookup, netsh, command prompt, network troubleshooting, dns]
 relatedSlugs: [wifi-connected-no-internet, find-ip-and-mac-address, improve-home-wifi-speed]
 faq:

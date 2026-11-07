@@ -3,6 +3,7 @@ title: "How to Start Outlook in Safe Mode and Create a New Profile"
 description: "Fix crashing, freezing or syncing problems in classic Outlook for Windows by starting it in Safe Mode, disabling faulty add-ins and creating a fresh Outlook profile."
 date: 2026-10-10
 category: microsoft-365
+videos: ["2v4z4Ia-QZs"]
 keywords: [outlook, safe mode, add-ins, profile, crashing, classic outlook, microsoft 365]
 relatedSlugs: [outlook-not-receiving-emails, onedrive-not-syncing]
 faq:

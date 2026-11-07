@@ -70,7 +70,16 @@ permalink: /
 {%- endif %}
 {%- endfor %}
 
+{%- if youtube.items.length %}
 <section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><div><h2>Watch on YouTube</h2><p>Short, practical video tutorials from the ByteWise IT channel.</p></div><a href="{{ youtube.channelUrl }}?sub_confirmation=1" rel="noopener" target="_blank">Subscribe →</a></div>
+    <div class="yt-grid">{% for v in youtube.items | limit(3) %}{% include "partials/video.njk" %}{% endfor %}</div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section">
   <div class="container">
     <div class="section-head"><div><h2>Why readers trust ByteWise</h2><p>Our standards are published so you can hold us to them.</p></div><a href="/editorial-policy/">Editorial policy →</a></div>
     <div class="trust">

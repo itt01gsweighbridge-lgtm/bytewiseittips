@@ -53,6 +53,10 @@ This website may display advertising served by **Google AdSense**. When advertis
 
 Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent through a Google-certified consent management platform before personalised advertising is used. More information is available in [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites). **Legal basis:** consent (where required by law) or legitimate interests.
 
+### 6. Embedded YouTube videos
+
+Some guides include video tutorials from our YouTube channel. To protect your privacy, the video player is **not loaded until you click play**. Before that, only the video’s preview image is fetched from YouTube’s image server (i.ytimg.com), which receives your IP address but sets no cookies. When you click play, the video loads from Google’s privacy-enhanced domain **youtube-nocookie.com**; YouTube may then store information on your device and process data as described in [Google’s Privacy Policy](https://policies.google.com/privacy). Links to our channel open on youtube.com. **Legal basis:** your action (clicking play) and our legitimate interest in offering video tutorials.
+
 ## Cookies
 
 The cookies and similar technologies we use are listed in our [Cookie Policy](/cookie-policy/).

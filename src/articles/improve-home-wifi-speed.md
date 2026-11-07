@@ -3,6 +3,7 @@ title: "Slow Home Wi-Fi? 10 Practical Ways to Improve Speed and Coverage"
 description: "Improve slow or patchy home Wi-Fi with practical fixes: router placement, choosing the right band and channel, firmware updates, mesh systems and when to use Ethernet."
 date: 2026-10-18
 category: networking
+videos: ["T7zEcPgP944"]
 keywords: [wifi, slow internet, router, mesh, 5 GHz, channel, speed test, coverage]
 relatedSlugs: [choose-wifi-router, wifi-connected-no-internet, network-troubleshooting-commands]
 faq:

@@ -71,6 +71,17 @@ collections:
       - { label: Keywords, name: keywords, widget: list, required: false, hint: "Used for search and related articles." }
       - { label: Featured image (optional), name: image, widget: image, required: false, hint: "Leave empty to use the category illustration. Only upload images you own or are licensed to use." }
       - { label: Image alt text, name: imageAlt, widget: string, required: false }
+      - label: YouTube video tutorials (shown at the top of the article)
+        name: videos
+        widget: relation
+        collection: settings
+        file: youtube
+        search_fields: ["items.*.title"]
+        value_field: "items.*.id"
+        display_fields: ["items.*.title"]
+        multiple: true
+        required: false
+        hint: "Add the video to Settings › YouTube videos first, then pick it here."
       - label: Related article slugs
         name: relatedSlugs
         widget: relation
@@ -188,6 +199,20 @@ collections:
                 fields:
                   - { label: In-article (after intro) slot ID, name: inArticleTop, widget: string, required: false }
                   - { label: In-article (end) slot ID, name: inArticleBottom, widget: string, required: false }
+      - name: youtube
+        label: YouTube videos
+        file: src/_settings/videos.json
+        format: json
+        fields:
+          - { label: Channel URL, name: channelUrl, widget: string }
+          - { label: Channel name, name: channelName, widget: string }
+          - label: Videos (newest first – the first 3 appear on the homepage)
+            name: items
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Video ID (the part after watch?v= in the YouTube link)", name: id, widget: string, pattern: ['^[A-Za-z0-9_-]{6,20}$', 'Paste only the video ID, e.g. T7zEcPgP944'] }
+              - { label: Title, name: title, widget: string }
       - name: author
         label: Author profile
         file: src/_data/author.json

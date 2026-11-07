@@ -1,0 +1,62 @@
+{
+  "channelUrl": "https://www.youtube.com/@ByteWiseITTips",
+  "channelName": "ByteWise IT",
+  "items": [
+    {
+      "id": "fdfbvs8l5oE",
+      "title": "Bulk Rename Files from a CSV List with Python (Dry Run First, No Overwrites)"
+    },
+    {
+      "id": "EfPcYDHEy1Y",
+      "title": "Is Your Backup Really Complete? Compare Two Folders with PowerShell and SHA-256 Hashes"
+    },
+    {
+      "id": "86sG1D-SQTY",
+      "title": "Find Duplicate Files in Windows with PowerShell (Free, No Software Needed)"
+    },
+    {
+      "id": "Bgd9aMFeNyQ",
+      "title": "Check If Websites Are Down with Python: Simple Uptime Monitor"
+    },
+    {
+      "id": "rOHlj2hLwC0",
+      "title": "Convert CSV to a Formatted Excel Report with Python (openpyxl)"
+    },
+    {
+      "id": "GyZFQ1srabI",
+      "title": "Spot a Fake Link: Find the Real Domain in Any URL (with a Python Checker)"
+    },
+    {
+      "id": "WwyhijjLvbs",
+      "title": "Robocopy Backup in Windows: Copy Folders Safely (and Avoid the /MIR Trap)"
+    },
+    {
+      "id": "jyglXnSi5UE",
+      "title": "Disk Full? Find What's Using the Space with PowerShell and Python"
+    },
+    {
+      "id": "n8vj8AdTlJs",
+      "title": "Website Not Loading? Troubleshoot DNS with PowerShell (Resolve-DnsName, Test-NetConnection)"
+    },
+    {
+      "id": "gx940KD0Isk",
+      "title": "Organise a Messy Downloads Folder with Python (Dry Run First, No Overwrites)"
+    },
+    {
+      "id": "-RghU_iQnz0",
+      "title": "Turn On MFA in Microsoft 365: The #1 Security Step for Small Teams"
+    },
+    {
+      "id": "kbP7mmp0qUs",
+      "title": "Send Microsoft Forms Responses to Excel Automatically | Power Automate Tutorial"
+    },
+    {
+      "id": "T7zEcPgP944",
+      "title": "Slow Office Wi-Fi? 6 Fixes That Actually Work"
+    },
+    {
+      "id": "2v4z4Ia-QZs",
+      "title": "5 Outlook Tricks That Save You Time Every Day | Microsoft 365 Tips"
+    }
+  ]
+}

@@ -43,6 +43,10 @@ When Google AdSense advertising is active, Google and its partners may set cooki
 
 For visitors in the EEA, the UK and Switzerland, a Google-certified consent message asks for your choices before personalised advertising cookies are used.
 
+## Embedded YouTube videos
+
+Video players on our guides use click-to-load: nothing from the YouTube player loads until you press play. When you do, the video is served from youtube-nocookie.com, and YouTube may store data in your browser (for example to remember playback settings or measure views). See [Google’s Privacy Policy](https://policies.google.com/privacy).
+
 ## Third-party links
 
 Our guides link to official documentation on other websites. Those sites have their own cookie policies, which we do not control.
