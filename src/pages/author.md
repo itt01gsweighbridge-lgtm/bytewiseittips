@@ -20,15 +20,15 @@ showUpdated: true
 - {{ e }}
 {% endfor %}
 
+{% if author.qualifications.length -%}
 ### Qualifications
 
-{% if author.qualifications.length -%}
 {% for q in author.qualifications -%}
 - {{ q }}
 {% endfor %}
-{%- else -%}
-{% setupRequired "Add any certifications you actually hold (e.g. Microsoft, CompTIA, Cisco) in Admin › Settings › Author profile › Qualifications. Leave empty if none – never list qualifications you don't have." %}
-{%- endif %}
+{% else -%}
+{% setupRequired "Qualifications section is hidden until you add certifications you actually hold (Admin › Settings › Author profile › Qualifications)." %}
+{% endif %}
 
 ### Areas of expertise covered on this site
 
