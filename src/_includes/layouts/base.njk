@@ -45,7 +45,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/feed.xml">
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/main.css?v={{ buildTime | ymd }}">
+<link rel="stylesheet" href="/assets/css/main.css?v={{ assetHash.css }}">
 <script>
 /* Apply saved or system colour theme before first paint (prevents flash). */
 (function(){try{var t=localStorage.getItem("bw-theme");if(t==="dark"||t==="light"){document.documentElement.dataset.theme=t;}}catch(e){}})();
@@ -77,7 +77,7 @@
 </main>
 {% include "partials/footer.njk" %}
 {% include "partials/consent.njk" %}
-<script src="/assets/js/main.js?v={{ buildTime | ymd }}" defer></script>
-{%- if pageScript %}<script src="/assets/js/{{ pageScript }}?v={{ buildTime | ymd }}" defer></script>{% endif %}
+<script src="/assets/js/main.js?v={{ assetHash.main }}" defer></script>
+{%- if pageScript %}<script src="/assets/js/{{ pageScript }}?v={{ assetHash[pageScript | replace(".js","")] }}" defer></script>{% endif %}
 </body>
 </html>

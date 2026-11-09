@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import crypto from "node:crypto";
 import { minify } from "html-minifier-terser";
 
 const ENV = process.env.ELEVENTY_ENV || "development";
@@ -35,6 +36,16 @@ const isPublished = (item) => {
 export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("env", ENV);
   eleventyConfig.addGlobalData("buildTime", new Date());
+  // Content hashes for cache-busting: a file's URL changes whenever its content changes.
+  eleventyConfig.addGlobalData("assetHash", () => {
+    const h = (f) => crypto.createHash("md5").update(fs.readFileSync(f)).digest("hex").slice(0, 10);
+    return {
+      css: h("src/assets/css/main.css"),
+      main: h("src/assets/js/main.js"),
+      search: h("src/assets/js/search.js"),
+      contact: h("src/assets/js/contact.js"),
+    };
+  });
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/admin/config.yml": "admin/config.yml" });
