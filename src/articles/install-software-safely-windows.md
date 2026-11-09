@@ -1,7 +1,7 @@
 ---
 title: "How to Install Software Safely on Windows (and Avoid Bundled Junk)"
 description: "Download and install Windows software safely: use official sources and the Microsoft Store, spot fake download buttons, avoid bundled extras, and understand SmartScreen and UAC warnings."
-date: 2026-10-12
+date: 2026-11-07
 category: software
 keywords: [install software, windows 11, microsoft store, smartscreen, uac, bundleware, malware, safe download]
 relatedSlugs: [winget-package-manager-guide, uninstall-stubborn-programs, recognise-phishing-emails]

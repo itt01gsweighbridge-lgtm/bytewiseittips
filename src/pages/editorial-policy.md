@@ -53,4 +53,4 @@ We correct errors promptly and transparently. See our [corrections policy](/corr
 
 ## Feedback
 
-If you believe a guide falls short of these standards, please [contact us](/contact/).
+If you believe a guide falls short of these standards, please email [{{ site.owner.contactEmail }}](mailto:{{ site.owner.contactEmail }}) or use our [contact page](/contact/).

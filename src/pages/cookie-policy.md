@@ -53,4 +53,4 @@ Our guides link to official documentation on other websites. Those sites have th
 
 ## More information
 
-See our [Privacy Policy](/privacy-policy/) for how personal data is processed and your rights, or [contact us](/contact/) with any questions.
+See our [Privacy Policy](/privacy-policy/) for how personal data is processed and your rights, or contact us at [{{ site.owner.contactEmail }}](mailto:{{ site.owner.contactEmail }}) with any questions.

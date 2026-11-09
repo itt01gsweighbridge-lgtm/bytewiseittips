@@ -1,7 +1,7 @@
 ---
 title: "How to Install and Update Apps from the Command Line with winget"
 description: "A beginner-friendly guide to winget, the Windows Package Manager: search for apps, install by ID, update everything at once, uninstall programs and export your app list to a new PC."
-date: 2026-09-28
+date: 2026-11-07
 category: software
 keywords: [winget, windows package manager, command line, install apps, update apps, powershell, windows 11]
 relatedSlugs: [install-software-safely-windows, uninstall-stubborn-programs, create-windows-11-installation-usb]

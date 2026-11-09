@@ -1,7 +1,7 @@
 ---
 title: "Android Phone Not Charging? Troubleshooting Steps That Work"
 description: "Fix an Android phone that won't charge or charges slowly: check the cable, charger and USB-C port, clean lint safely, use Safe Mode and know when moisture warnings or battery faults need a repair."
-date: 2026-09-18
+date: 2026-11-07
 category: android
 keywords: [android, not charging, slow charging, usb-c, charger, charging port, moisture detected]
 relatedSlugs: [android-battery-draining-fast, android-storage-full]

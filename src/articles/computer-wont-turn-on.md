@@ -1,7 +1,7 @@
 ---
 title: "Computer Won't Turn On? A Systematic Diagnosis Checklist"
 description: "Work out why a laptop or desktop PC won't power on or won't boot, step by step – from power and display checks to beep codes, RAM and what to tell a repair technician."
-date: 2026-10-14
+date: 2026-11-07
 category: hardware
 keywords: [pc won't turn on, laptop won't start, no power, black screen, beep codes, power supply, ram]
 relatedSlugs: [laptop-overheating-fixes, upgrade-laptop-to-ssd, 3-2-1-backup-rule]

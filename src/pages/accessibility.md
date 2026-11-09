@@ -32,7 +32,7 @@ We aim to meet the **Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA
 
 ## Feedback and contact
 
-If you find a barrier on this website, please tell us through our [contact page](/contact/). Let us know the page address, what you were trying to do and the assistive technology you use, and we will try to fix the problem or provide the information in another way.
+If you find a barrier on this website, please email [{{ site.owner.contactEmail }}](mailto:{{ site.owner.contactEmail }}) or use our [contact page](/contact/). Let us know the page address, what you were trying to do and the assistive technology you use, and we will try to fix the problem or provide the information in another way.
 
 ## Technical information
 

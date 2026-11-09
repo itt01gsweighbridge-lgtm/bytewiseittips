@@ -1,7 +1,7 @@
 ---
 title: "How to Choose a Wi-Fi Router: Wi-Fi 6, 6E and 7 Explained"
 description: "Understand Wi-Fi standards, bands, mesh systems and security features so you can choose the right router for your home or small office – without paying for features you won't use."
-date: 2026-09-12
+date: 2026-11-07
 category: buying-guides
 keywords: [wifi router, wifi 6, wifi 6e, wifi 7, mesh, wpa3, buying guide, 802.11ax, 802.11be]
 relatedSlugs: [improve-home-wifi-speed, wifi-connected-no-internet, how-much-ram-do-you-need]

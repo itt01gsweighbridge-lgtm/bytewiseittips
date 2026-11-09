@@ -1,7 +1,7 @@
 ---
 title: "How to Repair Corrupted Windows System Files with SFC and DISM"
 description: "Use Windows' built-in DISM and System File Checker tools to find and repair corrupted system files in Windows 11 and Windows 10, and learn how to read the results."
-date: 2026-10-30
+date: 2026-11-07
 category: windows
 keywords: [sfc, dism, system file checker, corrupted files, windows 11, command prompt, repair]
 relatedSlugs: [windows-update-stuck-fix, windows-11-slow-startup-fixes, uninstall-stubborn-programs]

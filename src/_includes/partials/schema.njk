@@ -1,3 +1,33 @@
+{%- set orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": site.url + "/#organization",
+  "name": site.name,
+  "url": site.url + "/",
+  "logo": { "@type": "ImageObject", "url": "/assets/img/logo-512.png" | absoluteUrl, "width": 512, "height": 512 },
+  "email": site.owner.contactEmail,
+  "founder": { "@type": "Person", "@id": site.url + "/author/#person", "name": author.personName },
+  "sameAs": [site.social.youtube] | reject("falsy")
+} %}
+{%- if page.url == "/" or page.url == "/about/" or page.url == "/contact/" %}
+<script type="application/ld+json">{{ orgSchema | json | safe }}</script>
+{%- endif %}
+{%- if page.url == "/author/" %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": site.url + "/author/#person",
+    "name": author.personName,
+    "jobTitle": author.personJobTitle,
+    "description": author.personBio,
+    "knowsAbout": author.expertise,
+    "url": "/author/" | absoluteUrl,
+    "worksFor": { "@id": site.url + "/#organization" }
+  }
+} | json | safe }}</script>
+{%- endif %}
 {%- if breadcrumbs %}
 {%- set crumbItems = [] %}
 {%- for b in breadcrumbs %}
@@ -20,6 +50,7 @@
   "keywords": (keywords or []) | join(", "),
   "mainEntityOfPage": { "@type": "WebPage", "@id": page.url | absoluteUrl },
   "author": { "@type": "Organization", "name": author.name, "url": "/author/" | absoluteUrl },
-  "publisher": { "@type": "Organization", "name": site.name, "url": site.url + "/", "logo": { "@type": "ImageObject", "url": "/assets/img/logo-512.png" | absoluteUrl } }
+  "editor": { "@type": "Person", "@id": site.url + "/author/#person", "name": author.personName, "url": "/author/" | absoluteUrl },
+  "publisher": { "@type": "Organization", "@id": site.url + "/#organization", "name": site.name, "url": site.url + "/", "logo": { "@type": "ImageObject", "url": "/assets/img/logo-512.png" | absoluteUrl } }
 } | json | safe }}</script>
 {%- endif %}

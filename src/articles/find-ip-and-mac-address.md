@@ -1,7 +1,7 @@
 ---
 title: "How to Find Your IP Address and MAC Address on Any Device"
 description: "Find your private and public IP address and your device's MAC address on Windows, macOS, Android and iPhone, and understand the difference – including private (random) Wi-Fi addresses."
-date: 2026-09-20
+date: 2026-11-07
 category: it-tutorials
 keywords: [ip address, mac address, public ip, private ip, ipconfig, windows, android, iphone]
 relatedSlugs: [network-troubleshooting-commands, wifi-connected-no-internet, improve-home-wifi-speed]

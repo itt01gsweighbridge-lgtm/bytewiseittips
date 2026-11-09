@@ -3,6 +3,7 @@
     <div class="footer-brand">
       <a class="brand" href="/">{% include "partials/logo.njk" %}<span class="brand-text"><span class="brand-name">ByteWise</span><span class="brand-sub">IT Tips</span></span></a>
       <p>{{ site.description }}</p>
+      {%- if site.owner.contactEmail %}<p class="footer-email">Email: <a href="mailto:{{ site.owner.contactEmail }}">{{ site.owner.contactEmail }}</a></p>{% endif %}
       {%- set hasSocial = site.social.youtube or site.social.x or site.social.facebook or site.social.linkedin %}
       {%- if hasSocial %}
       <ul class="social">

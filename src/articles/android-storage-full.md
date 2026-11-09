@@ -1,7 +1,7 @@
 ---
 title: "Android Storage Full? Safe Ways to Free Up Space"
 description: "Free up space on an Android phone or tablet safely: find what's using storage, clear app caches, back up photos, manage WhatsApp media and downloads, and avoid deleting the wrong things."
-date: 2026-09-22
+date: 2026-11-07
 category: android
 keywords: [android, storage full, free up space, cache, google photos, files by google, whatsapp]
 relatedSlugs: [android-battery-draining-fast, android-phone-not-charging, 3-2-1-backup-rule]

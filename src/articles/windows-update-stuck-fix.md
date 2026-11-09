@@ -1,7 +1,7 @@
 ---
 title: "Windows Update Stuck or Failing? A Step-by-Step Troubleshooting Guide"
 description: "Fix Windows Update when it's stuck downloading, stuck at a percentage or failing with an error code – from simple checks to safely resetting Windows Update components."
-date: 2026-10-26
+date: 2026-11-07
 category: windows
 keywords: [windows update, stuck, error, softwaredistribution, troubleshooter, windows 11]
 relatedSlugs: [repair-windows-sfc-dism, windows-11-slow-startup-fixes]

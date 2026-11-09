@@ -1,7 +1,7 @@
 ---
 title: "How Much RAM Do You Really Need? A Practical Guide"
 description: "Find out how much RAM you need for browsing, office work, gaming, photo and video editing or virtual machines, how to check your current usage in Windows, and what to know before upgrading."
-date: 2026-09-16
+date: 2026-11-07
 category: buying-guides
 keywords: [ram, memory, 8gb, 16gb, 32gb, ddr4, ddr5, upgrade, task manager, buying guide]
 relatedSlugs: [ssd-vs-hdd, windows-11-slow-startup-fixes, choose-wifi-router]

@@ -59,6 +59,7 @@ collections:
         hint: "Shown in search results and social shares. Aim for 120–160 characters."
       - { label: Publication date, name: date, widget: datetime, hint: "A future date schedules the article." }
       - { label: Last meaningful update, name: updated, widget: datetime, required: false }
+      - { label: Last reviewed for accuracy, name: reviewed, widget: datetime, required: false, hint: "Shown at the end of the article. Leave empty to use the update date." }
       - label: Category
         name: category
         widget: relation
@@ -223,7 +224,12 @@ collections:
           - { label: Team biography, name: bio, widget: text }
           - { label: Areas of focus, name: expertise, widget: list }
           - { label: Editor's real name, name: personName, widget: string, required: false }
+          - { label: Editor's role on the site, name: personRole, widget: string, required: false }
+          - { label: Editor's job title, name: personJobTitle, widget: string, required: false }
           - { label: Editor's biography (truthful), name: personBio, widget: text, required: false }
+          - { label: Relevant experience, name: experience, widget: list, required: false }
+          - { label: Qualifications (only ones actually held), name: qualifications, widget: list, required: false }
+          - { label: Profile last reviewed, name: lastReviewed, widget: datetime, format: "YYYY-MM-DD", required: false }
       - name: categories
         label: Categories
         file: src/_settings/categories.json

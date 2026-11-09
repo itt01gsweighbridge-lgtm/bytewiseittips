@@ -12,7 +12,7 @@ layout: layouts/base.njk
       <h1>{{ title }}</h1>
       <p class="lede">{{ description }}</p>
       <div class="meta">
-        <span>By <a href="/author/">{{ author.name }}</a></span>
+        <span>By <a href="/author/">{{ author.name }}</a>{% if author.personName %} · Editor: <a href="/author/">{{ author.personName }}</a>{% endif %}</span>
         <span aria-hidden="true">·</span>
         <span>Published <time datetime="{{ page.date | ymd }}">{{ page.date | readableDate }}</time></span>
         {%- if (updated | ymd) != (page.date | ymd) %}
@@ -81,7 +81,7 @@ layout: layouts/base.njk
       {% include "partials/channel-cta.njk" %}
 
       <aside class="article-note" aria-label="About this article">
-        <p><strong>How we write our guides:</strong> this article was prepared by the {{ site.name }} editorial team and checked against the official documentation listed above. Menu names can differ slightly between software versions and device manufacturers. Spotted an error? Please tell us via our <a href="/contact/">contact page</a> – see our <a href="/corrections-policy/">corrections policy</a>.</p>
+        <p><strong>How this guide was made:</strong> it was drafted with AI assistance, then checked against the official documentation listed above and published under the editorial responsibility of {{ author.personName or "the editor" }}. Last reviewed <time datetime="{{ (reviewed or updated) | ymd }}">{{ (reviewed or updated) | readableDate }}</time>. Menu names can differ slightly between software versions and device manufacturers. Spotted an error? Please tell us via our <a href="/contact/">contact page</a> – see our <a href="/corrections-policy/">corrections policy</a>.</p>
       </aside>
 
       {%- set rel = collections.articles | related(page.url, category, keywords, relatedSlugs) %}

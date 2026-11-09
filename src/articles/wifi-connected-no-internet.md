@@ -1,7 +1,7 @@
 ---
 title: "Wi-Fi Connected but No Internet? How to Find and Fix the Problem"
 description: "Your device says it's connected to Wi-Fi but nothing loads. Learn how to work out whether the fault is your device, your router or your provider – and fix it step by step."
-date: 2026-11-06
+date: 2026-11-07
 category: networking
 videos: ["n8vj8AdTlJs"]
 keywords: [wifi, no internet, router, dns, ipconfig, network reset, windows 11]

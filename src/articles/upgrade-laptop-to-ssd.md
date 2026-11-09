@@ -1,7 +1,7 @@
 ---
 title: "How to Upgrade Your Laptop to an SSD Without Losing Data"
 description: "A practical guide to upgrading a laptop from a hard drive or small SSD: choosing the right drive (SATA vs NVMe, M.2 sizes), cloning or clean installing, and avoiding common mistakes."
-date: 2026-09-30
+date: 2026-11-07
 category: hardware
 keywords: [ssd upgrade, laptop, nvme, m.2, sata, clone, clonezilla, windows 11]
 relatedSlugs: [ssd-vs-hdd, create-windows-11-installation-usb, 3-2-1-backup-rule]

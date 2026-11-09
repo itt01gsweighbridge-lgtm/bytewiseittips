@@ -1,7 +1,7 @@
 ---
 title: "Using AI Chatbots at Work Safely: A Practical Guide"
 description: "Get real productivity gains from AI assistants at work while protecting confidential data, respecting company policy, checking accuracy and avoiding common security and privacy mistakes."
-date: 2026-11-03
+date: 2026-11-07
 category: ai-tools
 keywords: [ai, chatbot, workplace, data privacy, confidential data, ai policy, productivity, security]
 relatedSlugs: [write-better-ai-prompts, fact-check-ai-answers, recognise-phishing-emails]

@@ -58,4 +58,4 @@ These terms are governed by the laws of the country in which the website operato
 
 ## 11. Contact
 
-Questions about these terms can be sent through our [contact page](/contact/).
+Questions about these terms can be sent to [{{ site.owner.contactEmail }}](mailto:{{ site.owner.contactEmail }}) or through our [contact page](/contact/).

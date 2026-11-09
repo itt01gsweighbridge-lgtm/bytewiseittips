@@ -1,7 +1,7 @@
 ---
 title: "Windows 11 Slow to Start? 9 Practical Fixes for Faster Boot Times"
 description: "Find out why your Windows 11 PC takes ages to boot and how to speed it up safely – from startup apps and Fast Startup to drivers, malware checks and storage upgrades."
-date: 2026-11-04
+date: 2026-11-07
 category: windows
 videos: ["jyglXnSi5UE"]
 keywords: [windows 11, slow boot, startup apps, fast startup, task manager, ssd, performance]

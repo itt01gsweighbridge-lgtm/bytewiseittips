@@ -1,7 +1,7 @@
 ---
 title: "Two-Factor Authentication Explained: What It Is and How to Turn It On"
 description: "Understand two-factor authentication (2FA), compare SMS codes, authenticator apps, security keys and passkeys, and learn how to enable it and avoid getting locked out."
-date: 2026-10-06
+date: 2026-11-07
 category: cybersecurity
 videos: ["-RghU_iQnz0"]
 keywords: [two-factor authentication, 2fa, mfa, authenticator app, passkeys, security key, account security]

@@ -9,7 +9,7 @@ date: 2026-11-07
 
 ## How to report an error
 
-Please use our [contact page](/contact/) and choose the topic **“Correction”**. It helps if you include:
+Email [{{ site.owner.contactEmail }}](mailto:{{ site.owner.contactEmail }}) or use our [contact page](/contact/) and choose the topic **“Correction”**. It helps if you include:
 
 - the address (URL) of the page;
 - the sentence or step you believe is wrong;

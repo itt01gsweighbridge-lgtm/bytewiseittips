@@ -1,7 +1,7 @@
 ---
 title: "How to Recognise Phishing Emails, Texts and Scam Calls"
 description: "Learn the warning signs of phishing emails, smishing texts and fake tech-support calls, how to check a suspicious message safely, and what to do if you clicked a link."
-date: 2026-10-20
+date: 2026-11-07
 category: cybersecurity
 videos: ["GyZFQ1srabI"]
 keywords: [phishing, scam, smishing, email security, tech support scam, report phishing, online safety]

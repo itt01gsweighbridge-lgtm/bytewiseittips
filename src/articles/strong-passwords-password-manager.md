@@ -1,7 +1,7 @@
 ---
 title: "How to Create Strong Passwords and Use a Password Manager"
 description: "Learn what makes a password strong, why reusing passwords is risky, how passphrases work, and how to start using a password manager safely – based on NCSC and NIST guidance."
-date: 2026-11-02
+date: 2026-11-07
 category: cybersecurity
 videos: ["-RghU_iQnz0"]
 keywords: [passwords, password manager, passphrase, three random words, credential stuffing, security, passkeys]

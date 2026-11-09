@@ -57,4 +57,4 @@ The site may display advertising from Google AdSense. Advertising is always labe
 
 ## Get in touch
 
-Questions, corrections and suggestions for new guides are always welcome. Please use our [contact page](/contact/). We cannot provide one-to-one technical support, but reader questions often become future articles.
+Questions, corrections and suggestions for new guides are always welcome. Email us at [{{ site.owner.contactEmail }}](mailto:{{ site.owner.contactEmail }}) or use our [contact page](/contact/). We cannot provide one-to-one technical support, but reader questions often become future articles.

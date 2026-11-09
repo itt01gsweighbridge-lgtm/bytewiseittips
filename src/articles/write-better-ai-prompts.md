@@ -1,7 +1,7 @@
 ---
 title: "How to Write Better Prompts for AI Assistants: A Practical Framework"
 description: "Get more useful answers from AI chatbots with a simple prompt framework: give context, state the task, set constraints, show examples and iterate – with before-and-after prompts for IT and office work."
-date: 2026-10-08
+date: 2026-11-07
 category: ai-tools
 keywords: [ai prompts, prompt writing, chatbot, productivity, ai assistant, examples, office work]
 relatedSlugs: [ai-chatbots-at-work-safely, fact-check-ai-answers]

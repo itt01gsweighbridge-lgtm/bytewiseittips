@@ -1,7 +1,7 @@
 ---
 title: "OneDrive Not Syncing? How to Diagnose and Fix Sync Problems"
 description: "Fix OneDrive sync problems in Windows: understand the status icons, resolve paused or stuck syncs, file name and storage issues, and safely reset the OneDrive app."
-date: 2026-09-26
+date: 2026-11-07
 category: microsoft-365
 keywords: [onedrive, sync, microsoft 365, cloud storage, reset onedrive, files on-demand]
 relatedSlugs: [outlook-not-receiving-emails, 3-2-1-backup-rule, outlook-safe-mode-new-profile]

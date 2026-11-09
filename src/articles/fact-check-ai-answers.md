@@ -1,7 +1,7 @@
 ---
 title: "How to Fact-Check AI-Generated Answers Before You Rely on Them"
 description: "AI chatbots can sound confident and still be wrong. Learn why AI makes mistakes, which answers need the most checking, and a practical method for verifying facts, sources, code and commands."
-date: 2026-09-24
+date: 2026-11-07
 category: ai-tools
 keywords: [ai accuracy, hallucinations, fact-check, ai chatbot, verify sources, misinformation, critical thinking]
 relatedSlugs: [ai-chatbots-at-work-safely, write-better-ai-prompts, recognise-phishing-emails]

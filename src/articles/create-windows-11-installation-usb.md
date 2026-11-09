@@ -1,7 +1,7 @@
 ---
 title: "How to Create a Windows 11 Installation USB Drive"
 description: "Create a bootable Windows 11 installation USB with Microsoft's Media Creation Tool, then boot from it to reinstall or repair Windows – with requirements, BIOS tips and troubleshooting."
-date: 2026-10-02
+date: 2026-11-07
 category: it-tutorials
 keywords: [windows 11, bootable usb, media creation tool, reinstall windows, installation media, uefi, boot menu]
 relatedSlugs: [repair-windows-sfc-dism, upgrade-laptop-to-ssd, computer-wont-turn-on]
