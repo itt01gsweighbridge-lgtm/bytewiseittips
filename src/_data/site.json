@@ -30,8 +30,8 @@
     "provider": "builtin"
   },
   "adsense": {
-    "enabled": false,
-    "publisherId": "",
+    "enabled": true,
+    "publisherId": "ca-pub-7013663713455793",
     "autoAds": true,
     "slots": {
       "inArticleTop": "",
