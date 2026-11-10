@@ -27,7 +27,7 @@
     "ga4MeasurementId": ""
   },
   "consent": {
-    "provider": "builtin"
+    "provider": "google"
   },
   "adsense": {
     "enabled": true,
