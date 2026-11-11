@@ -64,7 +64,7 @@ Empty **Deleted Items** and **Junk Email**, and delete or archive large messages
 Messages may be arriving and simply being filed somewhere unexpected.
 
 - Look in **Junk Email** and, if Focused Inbox is on, the **Other** tab.
-- Use search for the sender’s address across **All folders**.
+- Use search for the sender’s address across **All folders**. If search itself seems unreliable, see [how to fix Outlook search](/articles/outlook-search-not-working/).
 - Review **rules** (classic Outlook: **File › Manage Rules & Alerts**; Outlook on the web and new Outlook: **Settings › Mail › Rules**). A rule moving or deleting messages is a common cause after reorganising folders.
 - Check **blocked senders** in your junk email settings.
 
