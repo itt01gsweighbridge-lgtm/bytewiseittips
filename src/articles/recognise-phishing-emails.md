@@ -73,7 +73,7 @@ A colleague emailing at an odd hour with an unusual request, a supplier suddenly
 
 Act quickly – it limits the damage.
 
-- **Entered a password?** Change it immediately on the real website, plus anywhere you’ve reused it. Turn on [two-factor authentication](/articles/two-factor-authentication-guide/). Check for unfamiliar email forwarding rules and sign-in activity.
+- **Entered a password?** Change it immediately on the real website, plus anywhere you’ve reused it. Turn on [two-factor authentication](/articles/two-factor-authentication-guide/). Check for unfamiliar email forwarding rules and sign-in activity – our guide to [recovering a hacked email account](/articles/email-account-hacked-what-to-do/) walks through each check.
 - **Shared card or bank details?** Contact your bank straight away using the number on your card. They can block the card and watch for fraud.
 - **Opened an attachment or installed something?** Disconnect from the internet, run a full scan with your security software (Microsoft Defender’s offline scan is a good option on Windows), and seek professional help if you’re unsure.
 - **Gave someone remote access?** Disconnect from the internet, uninstall the remote-access software, scan the computer, change passwords from a different device, and contact your bank.
