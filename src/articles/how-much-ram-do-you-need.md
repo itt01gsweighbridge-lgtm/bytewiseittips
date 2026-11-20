@@ -53,6 +53,8 @@ What to look at:
 - **Slots used** – how many RAM slots are filled (for example, *2 of 4*), useful for upgrade planning.
 - **Speed** and **Form factor** – the memory speed and type (SODIMM for laptops, DIMM for desktops).
 
+For other ways to see your processor, graphics card and exact PC model, see [how to check your PC specs in Windows 11](/articles/check-pc-specs-windows-11/).
+
 If memory usage is consistently above about 80–90% during normal work, more RAM will probably help. If it rarely goes above 60%, RAM isn’t your bottleneck – look at storage or other causes instead (see [why Windows is slow to start](/articles/windows-11-slow-startup-fixes/)).
 
 ## Before you upgrade: check compatibility
