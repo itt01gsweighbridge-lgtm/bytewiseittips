@@ -27,7 +27,7 @@ A laptop that runs hot, roars its fan constantly or shuts down without warning i
 - The keyboard, underside or area above the keyboard is uncomfortably hot.
 - Performance drops sharply after a few minutes of use (thermal throttling).
 - The laptop shuts down or restarts suddenly, especially under load.
-- The battery drains faster than usual or charging slows down.
+- The battery drains faster than usual or charging slows down. (If it stops charging altogether, see [what to do when a laptop is plugged in but not charging](/articles/laptop-plugged-in-not-charging/).)
 
 > **Stop using the laptop immediately** and unplug it if you notice a swollen battery (the case bulging, the touchpad lifting or the keyboard deforming), a burning or chemical smell, or smoke. A damaged lithium-ion battery is a fire risk and must be handled by a professional.
 
