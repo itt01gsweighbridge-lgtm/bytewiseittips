@@ -150,7 +150,7 @@ On Android or iPhone, the same logic applies. Turn Wi-Fi off and on, forget the 
 
 ## When to call your provider or a technician
 
-Contact your ISP if the router’s internet light stays red after a restart, if every device fails, or if the problem keeps returning at certain times of day. Ask whether they can see line faults, and note any error messages from the router’s admin page. If only one computer fails even after a network reset and driver reinstall, the Wi-Fi adapter itself may be faulty – a USB Wi-Fi adapter is an inexpensive way to confirm this.
+Contact your ISP if the router’s internet light stays red after a restart, if every device fails, or if the problem keeps returning at certain times of day. Ask whether they can see line faults, and note any error messages from the router’s admin page. If only one computer fails even after a network reset and driver reinstall, the Wi-Fi adapter itself may be faulty – a USB Wi-Fi adapter is an inexpensive way to confirm this. If your connection works but keeps dropping out, see our guide to [fixing Wi-Fi that keeps disconnecting in Windows 11](/articles/wifi-keeps-disconnecting-windows-11/).
 
 ## Conclusion
 
