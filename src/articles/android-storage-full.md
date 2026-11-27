@@ -90,7 +90,7 @@ Some Android phones have a microSD card slot. You can set the camera to save new
 
 ## Step 10: Restart and update
 
-A restart clears some temporary files. Keeping Android updated is also important – but updates need free space to install, so freeing space first often fixes failed updates.
+A restart clears some temporary files. Keeping Android updated is also important – but updates need free space to install, so freeing space first often fixes failed updates. If an app still crashes after you've freed up space, see our guide to [fixing Android apps that keep stopping](/articles/android-apps-keep-crashing/).
 
 ## What not to do
 
