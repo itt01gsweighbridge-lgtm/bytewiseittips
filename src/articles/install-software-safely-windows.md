@@ -27,7 +27,7 @@ Installing software is something most of us do without thinking – which is exa
 
 In order of preference:
 
-1. **The Microsoft Store** – apps are reviewed, install cleanly and update automatically. Many popular programs are available there.
+1. **The Microsoft Store** – apps are reviewed, install cleanly and update automatically. Many popular programs are available there. If the Store won't open or downloads get stuck, see our guide to [fixing the Microsoft Store in Windows 11](/articles/microsoft-store-not-working-windows-11/).
 2. **The developer’s official website** – type the address yourself or check it carefully.
 3. **Trusted package managers** such as **winget**, which installs software from official sources using a single command. See our [winget guide](/articles/winget-package-manager-guide/).
 
